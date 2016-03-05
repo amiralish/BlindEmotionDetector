@@ -61,6 +61,18 @@ public class ApiDemoActivity extends Activity {
 
     // Index of api demo cards.
     // Visible for testing.
+ /*
+    static final int EMOTION = 0;
+    static final int CARD_BUILDER = 1;
+    static final int CARD_BUILDER_EMBEDDED_LAYOUT = 2;
+    static final int CARD_SCROLL_VIEW = 3;
+    static final int GESTURE_DETECTOR = 4;
+    static final int TEXT_APPEARANCE = 5;
+    static final int OPENGL = 6;
+    static final int VOICE_MENU = 7;
+    static final int SLIDER = 8;
+*/
+
     static final int CARD_BUILDER = 0;
     static final int CARD_BUILDER_EMBEDDED_LAYOUT = 1;
     static final int CARD_SCROLL_VIEW = 2;
@@ -112,7 +124,8 @@ public class ApiDemoActivity extends Activity {
         cards.add(SLIDER, new CardBuilder(context, CardBuilder.Layout.TEXT)
                 .setText(R.string.text_slider));
         cards.add(EMOTION, new CardBuilder(context, CardBuilder.Layout.TEXT)
-                .setText(R.string.text_blind_emotion_detector));
+                .setText("Blind Emotion Detector"));
+
         return cards;
     }
 

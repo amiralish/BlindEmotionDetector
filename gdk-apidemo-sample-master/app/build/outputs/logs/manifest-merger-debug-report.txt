@@ -1,125 +1,149 @@
 -- Merging decision tree log ---
 manifest
-ADDED from AndroidManifest.xml:17:1
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:17:1-106:12
+	xmlns:tools
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:18:5-51
 	xmlns:android
-		ADDED from AndroidManifest.xml:17:11
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:17:11-69
 	package
-		ADDED from AndroidManifest.xml:18:5
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:19:5-54
 	android:versionName
-		ADDED from AndroidManifest.xml:20:5
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:21:5-30
+		INJECTED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml
 	android:versionCode
-		ADDED from AndroidManifest.xml:19:5
-		INJECTED from AndroidManifest.xml:0:0
-		INJECTED from AndroidManifest.xml:0:0
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:20:5-28
+		INJECTED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.CAMERA
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:23:5-64
+	android:name
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:23:22-62
 uses-sdk
-ADDED from AndroidManifest.xml:23:5
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:26:5-28:41
+MERGED from [com.affectiva.android:affdexsdk:3.0.2-dev] /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/exploded-aar/com.affectiva.android/affdexsdk/3.0.2-dev/AndroidManifest.xml:7:5-9:41
 	android:targetSdkVersion
-		ADDED from AndroidManifest.xml:25:9
-		INJECTED from AndroidManifest.xml:0:0
-		INJECTED from AndroidManifest.xml:0:0
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:28:9-38
+		INJECTED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from AndroidManifest.xml:24:9
-		INJECTED from AndroidManifest.xml:0:0
-		INJECTED from AndroidManifest.xml:0:0
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:27:9-35
+		INJECTED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml
 uses-permission#com.google.android.glass.permission.DEVELOPMENT
-ADDED from AndroidManifest.xml:28:5
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:31:5-86
 	android:name
-		ADDED from AndroidManifest.xml:28:22
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:31:22-84
 uses-feature#0x00020000
-ADDED from AndroidManifest.xml:30:5
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:33:5-78
 	android:required
-		ADDED from AndroidManifest.xml:30:52
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:33:52-75
 	android:glEsVersion
-		ADDED from AndroidManifest.xml:30:19
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:33:19-51
 application
-ADDED from AndroidManifest.xml:32:5
-activity#com.google.android.glass.sample.apidemo.ApiDemoActivity
-ADDED from AndroidManifest.xml:34:9
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:35:5-104:19
+MERGED from [com.affectiva.android:affdexsdk:3.0.2-dev] /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/exploded-aar/com.affectiva.android/affdexsdk/3.0.2-dev/AndroidManifest.xml:11:5-14:19
 	android:label
-		ADDED from AndroidManifest.xml:36:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:38:9-41
+		REJECTED from [com.affectiva.android:affdexsdk:3.0.2-dev] /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/exploded-aar/com.affectiva.android/affdexsdk/3.0.2-dev/AndroidManifest.xml:13:9-47
+	android:allowBackup
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:37:9-35
+		REJECTED from [com.affectiva.android:affdexsdk:3.0.2-dev] /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/exploded-aar/com.affectiva.android/affdexsdk/3.0.2-dev/AndroidManifest.xml:12:9-35
+	tools:replace
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:36:9-58
+activity#com.google.android.glass.sample.apidemo.ApiDemoActivity
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:44:9-54:20
+	android:label
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:46:13-45
 	android:icon
-		ADDED from AndroidManifest.xml:35:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:45:13-51
 	android:exported
-		ADDED from AndroidManifest.xml:37:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:47:13-36
 	android:name
-		ADDED from AndroidManifest.xml:34:19
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:44:19-50
 intent-filter#com.google.android.glass.action.VOICE_TRIGGER
-ADDED from AndroidManifest.xml:38:13
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:48:13-50:29
 action#com.google.android.glass.action.VOICE_TRIGGER
-ADDED from AndroidManifest.xml:39:17
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:49:17-88
 	android:name
-		ADDED from AndroidManifest.xml:39:25
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:49:25-85
 meta-data#com.google.android.glass.VoiceTrigger
-ADDED from AndroidManifest.xml:41:13
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:51:13-53:19
 	android:resource
-		ADDED from AndroidManifest.xml:42:17
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:52:17-54
 	android:name
-		ADDED from AndroidManifest.xml:41:24
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:51:24-76
 activity#com.google.android.glass.sample.apidemo.card.CardBuilderActivity
-ADDED from AndroidManifest.xml:46:9
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:56:9-58:15
 	android:exported
-		ADDED from AndroidManifest.xml:47:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:57:13-36
 	android:name
-		ADDED from AndroidManifest.xml:46:19
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:56:19-59
 activity#com.google.android.glass.sample.apidemo.card.EmbeddedCardLayoutActivity
-ADDED from AndroidManifest.xml:50:9
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:60:9-62:15
 	android:exported
-		ADDED from AndroidManifest.xml:51:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:61:13-36
 	android:name
-		ADDED from AndroidManifest.xml:50:19
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:60:19-66
 activity#com.google.android.glass.sample.apidemo.card.CardScrollViewActivity
-ADDED from AndroidManifest.xml:54:9
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:64:9-66:15
 	android:exported
-		ADDED from AndroidManifest.xml:55:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:65:13-36
 	android:name
-		ADDED from AndroidManifest.xml:54:19
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:64:19-62
 activity#com.google.android.glass.sample.apidemo.touchpad.SelectGestureDemoActivity
-ADDED from AndroidManifest.xml:58:9
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:68:9-70:15
 	android:exported
-		ADDED from AndroidManifest.xml:59:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:69:13-36
 	android:name
-		ADDED from AndroidManifest.xml:58:19
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:68:19-69
 activity#com.google.android.glass.sample.apidemo.touchpad.DiscreteGesturesActivity
-ADDED from AndroidManifest.xml:62:9
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:72:9-74:15
 	android:exported
-		ADDED from AndroidManifest.xml:63:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:73:13-36
 	android:name
-		ADDED from AndroidManifest.xml:62:19
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:72:19-68
 activity#com.google.android.glass.sample.apidemo.touchpad.ContinuousGesturesActivity
-ADDED from AndroidManifest.xml:66:9
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:76:9-78:15
 	android:exported
-		ADDED from AndroidManifest.xml:67:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:77:13-36
 	android:name
-		ADDED from AndroidManifest.xml:66:19
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:76:19-70
 activity#com.google.android.glass.sample.apidemo.theming.TextAppearanceActivity
-ADDED from AndroidManifest.xml:70:9
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:80:9-82:15
 	android:exported
-		ADDED from AndroidManifest.xml:71:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:81:13-36
 	android:name
-		ADDED from AndroidManifest.xml:70:19
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:80:19-65
 activity#com.google.android.glass.sample.apidemo.opengl.MenuActivity
-ADDED from AndroidManifest.xml:74:9
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:84:9-87:15
 	android:theme
-		ADDED from AndroidManifest.xml:76:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:86:13-45
 	android:exported
-		ADDED from AndroidManifest.xml:75:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:85:13-36
 	android:name
-		ADDED from AndroidManifest.xml:74:19
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:84:19-54
 service#com.google.android.glass.sample.apidemo.opengl.OpenGlService
-ADDED from AndroidManifest.xml:79:9
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:89:9-92:15
 	android:exported
-		ADDED from AndroidManifest.xml:81:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:91:13-36
 	android:name
-		ADDED from AndroidManifest.xml:80:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:90:13-49
 activity#com.google.android.glass.sample.apidemo.voicemenu.VoiceMenuActivity
-ADDED from AndroidManifest.xml:84:9
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:94:9-96:15
 	android:exported
-		ADDED from AndroidManifest.xml:85:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:95:13-36
 	android:name
-		ADDED from AndroidManifest.xml:84:19
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:94:19-62
 activity#com.google.android.glass.sample.apidemo.slider.SliderActivity
-ADDED from AndroidManifest.xml:88:9
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:98:9-100:15
 	android:exported
-		ADDED from AndroidManifest.xml:89:13
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:99:13-36
 	android:name
-		ADDED from AndroidManifest.xml:88:19
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:98:19-56
+activity#com.google.android.glass.sample.apidemo.Blind_Emotion_Detector.EmotionDetector
+ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:101:9-103:15
+	android:exported
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:102:13-36
+	android:name
+		ADDED from /Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/AndroidManifest.xml:101:19-73

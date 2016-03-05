@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_circle_red.png",
+        "source": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/res/drawable-hdpi/ic_circle_red.png"
+    },
+    {
+        "merged": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_circle_blue.png",
+        "source": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/res/drawable-hdpi/ic_circle_blue.png"
+    },
+    {
+        "merged": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_glass_logo.png",
+        "source": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/res/drawable-hdpi/ic_glass_logo.png"
+    },
+    {
+        "merged": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_wifi_150.png",
+        "source": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/res/drawable-hdpi/ic_wifi_150.png"
+    },
+    {
+        "merged": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_phone_50.png",
+        "source": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/res/drawable-hdpi/ic_phone_50.png"
+    },
+    {
+        "merged": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_stop.png",
+        "source": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/res/drawable-hdpi/ic_stop.png"
+    },
+    {
+        "merged": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_circle_green.png",
+        "source": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/res/drawable-hdpi/ic_circle_green.png"
+    },
+    {
+        "merged": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_warning_150.png",
+        "source": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/res/drawable-hdpi/ic_warning_150.png"
+    },
+    {
+        "merged": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_avatar_70.png",
+        "source": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/res/drawable-hdpi/ic_avatar_70.png"
+    },
+    {
+        "merged": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_smile.png",
+        "source": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/res/drawable-hdpi/ic_smile.png"
+    },
+    {
+        "merged": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_circle_yellow.png",
+        "source": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/res/drawable-hdpi/ic_circle_yellow.png"
+    }
+]

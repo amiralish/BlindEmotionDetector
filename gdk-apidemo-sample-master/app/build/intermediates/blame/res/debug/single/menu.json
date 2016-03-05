@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/res/merged/debug/menu/voice_menu.xml",
+        "source": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/res/menu/voice_menu.xml"
+    },
+    {
+        "merged": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/res/merged/debug/menu/opengl_livecard.xml",
+        "source": "/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/src/main/res/menu/opengl_livecard.xml"
+    }
+]

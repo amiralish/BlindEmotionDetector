@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="affdexsdk-3.0.2-dev">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.affectiva.android/affdexsdk/3.0.2-dev/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.affectiva.android/affdexsdk/3.0.2-dev/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

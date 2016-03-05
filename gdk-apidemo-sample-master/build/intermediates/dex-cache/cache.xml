@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Samaneh/.gradle/caches/modules-2/files-2.1/com.squareup.dagger/dagger/1.2.2/e8f912ee19ad84958510883ea191135276b091f8/dagger-1.2.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e8f912ee19ad84958510883ea191135276b091f8">
+        <dex dex="/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/pre-dexed/debug/dagger-1.2.2_0216f2d3a3f5bdbd8beca425079bd64d494cbbc6.jar" />
+    </item>
+    <item
+        jar="/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/exploded-aar/com.affectiva.android/affdexsdk/3.0.2-dev/jars/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="175d19665a961fbca3b9c08f2a2d337a7090d235">
+        <dex dex="/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/pre-dexed/debug/com.affectiva.android-affdexsdk-3.0.2-dev_cfc24595ef86826d0857f6cf196e6bd17979ab93.jar" />
+    </item>
+    <item
+        jar="/Users/Samaneh/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/Samaneh/Downloads/hackathon/BlindEmotionDetector/gdk-apidemo-sample-master/app/build/intermediates/pre-dexed/debug/javax.inject-1_61558576eda610a5c39ed2eba8e8369136eb3907.jar" />
+    </item>
+
+</items>
