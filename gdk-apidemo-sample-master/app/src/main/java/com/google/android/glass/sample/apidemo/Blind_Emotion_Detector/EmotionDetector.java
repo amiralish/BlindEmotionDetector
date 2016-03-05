@@ -10,6 +10,12 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import java.util.Locale;
+import android.app.Activity;
+import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
+import android.view.MotionEvent;
+import android.widget.TextView;
 
 import com.google.android.glass.sample.apidemo.R;
 import com.google.android.glass.touchpad.GestureDetector;
@@ -88,7 +94,7 @@ import java.util.List;
  *
  * For use with SDK 2.02
  */
-public class EmotionDetector extends Activity implements Detector.ImageListener, CameraDetector.CameraEventListener {
+public class EmotionDetector extends Activity implements Detector.ImageListener, CameraDetector.CameraEventListener, TextToSpeech.OnInitListener {
 
     final String LOG_TAG = "Affectiva";
 
@@ -109,9 +115,13 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
     int previewWidth = 0;
     int previewHeight = 0;
 
+    TextToSpeech tts;
+    boolean initialized = false;
+    String queuedText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        tts = new TextToSpeech(this /* context ​*/, this /*​ listener */);
 
 
         setContentView(R.layout.emotion_detector);
@@ -247,7 +257,34 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
         } else {
             Face face = list.get(0);
             smileTextView.setText(String.format("SMILE\n%.2f",face.expressions.getSmile()));
+            if (face.expressions.getSmile() > 50) {
+                speak ("she is smiling");
+            }
         }
+    }
+    @Override
+    public void onInit(int status) {
+        if (status == TextToSpeech.SUCCESS) {
+            initialized = true;
+            tts.setLanguage(Locale.ENGLISH);
+
+            if (queuedText != null) {
+                speak(queuedText);
+            }
+        }
+    }
+
+    public void speak(String text) {
+        // If not yet initialized, queue up the text.
+        if (!initialized) {
+            queuedText = text;
+            return;
+        }
+        queuedText = null;
+        // Before speaking the current text, stop any ongoing speech.
+        tts.stop();
+        // Speak the text.
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
     @Override
