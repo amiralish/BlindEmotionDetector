@@ -16,10 +16,10 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.MotionEvent;
 import android.widget.TextView;
-
+import android.os.Handler;
 import com.google.android.glass.sample.apidemo.R;
 import com.google.android.glass.touchpad.GestureDetector;
-
+import java.lang.Thread;
 
 
 import com.google.android.glass.sample.apidemo.R;
@@ -258,7 +258,12 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
             Face face = list.get(0);
             smileTextView.setText(String.format("SMILE\n%.2f",face.expressions.getSmile()));
             if (face.expressions.getSmile() > 50) {
-                speak ("she is smiling");
+                speak ("smile");
+            }
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
     }
@@ -271,6 +276,18 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
             if (queuedText != null) {
                 speak(queuedText);
             }
+        }
+    }
+
+    private void countdown( final int start ){
+        if( start > 0 ){
+            Handler handler = new Handler();
+            handler.postDelayed( new Runnable(){
+                @Override
+                public void run(){
+                    countdown( start-1 );
+                }
+            }, 1000 );
         }
     }
 
