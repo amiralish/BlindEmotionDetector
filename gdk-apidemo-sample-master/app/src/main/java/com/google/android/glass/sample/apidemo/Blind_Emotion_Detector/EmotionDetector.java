@@ -194,11 +194,12 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
         });
         */
 
-        detector = new CameraDetector(this, CameraDetector.CameraType.CAMERA_BACK, cameraPreview);
+        detector = new CameraDetector(this, CameraDetector.CameraType.CAMERA_BACK, cameraPreview, 1, Detector.FaceDetectorMode.LARGE_FACES);
         detector.setLicensePath("Affdex.license");
         detector.setDetectSmile(true);
         detector.setImageListener(this);
         detector.setOnCameraEventListener(this);
+       // detector.setMaxProcessRate((float) 1);
         //switchCamera(isCameraBack ? CameraDetector.CameraType.CAMERA_BACK : CameraDetector.CameraType.CAMERA_FRONT);
 
     }
@@ -206,7 +207,7 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
     @Override
     protected void onResume() {
         super.onResume();
-        //smileTextView.setText("NO FACE");
+        smileTextView.setText("NO FACE");
 
         if (isSDKStarted) {
             startDetector();
