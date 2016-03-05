@@ -29,6 +29,7 @@ import com.google.android.glass.sample.apidemo.voicemenu.VoiceMenuActivity;
 import com.google.android.glass.widget.CardBuilder;
 import com.google.android.glass.widget.CardScrollAdapter;
 import com.google.android.glass.widget.CardScrollView;
+import com.google.android.glass.sample.apidemo.Blind_Emotion_Detector.EmotionDetector;
 
 import android.app.Activity;
 import android.content.Context;
@@ -68,6 +69,7 @@ public class ApiDemoActivity extends Activity {
     static final int OPENGL = 5;
     static final int VOICE_MENU = 6;
     static final int SLIDER = 7;
+    static final int EMOTION = 8;
 
     private CardScrollAdapter mAdapter;
     private CardScrollView mCardScroller;
@@ -109,6 +111,8 @@ public class ApiDemoActivity extends Activity {
                 .setText(R.string.text_voice_menu));
         cards.add(SLIDER, new CardBuilder(context, CardBuilder.Layout.TEXT)
                 .setText(R.string.text_slider));
+        cards.add(EMOTION, new CardBuilder(context, CardBuilder.Layout.TEXT)
+                .setText(R.string.text_blind_emotion_detector));
         return cards;
     }
 
@@ -169,6 +173,9 @@ public class ApiDemoActivity extends Activity {
 
                     case SLIDER:
                         startActivity(new Intent(ApiDemoActivity.this, SliderActivity.class));
+                        break;
+                    case EMOTION:
+                        startActivity(new Intent(ApiDemoActivity.this, EmotionDetector.class));
                         break;
 
                     default:

@@ -28,6 +28,7 @@
     <string name="text_text_appearance">Text appearance examples</string>
     <string name="text_voice_menu">Voice menu</string>
     <string name="text_slider">Slider</string>
+    <string name="text_blind_emotion_detector">Blind Emotion Detector</string>
 
     <!-- Used as content for cards in the CardBuilder API examples. -->
     <string name="text_card_footnote">This is the footnote</string>
