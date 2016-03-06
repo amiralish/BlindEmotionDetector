@@ -97,6 +97,7 @@ import java.util.List;
 public class EmotionDetector extends Activity implements Detector.ImageListener, CameraDetector.CameraEventListener, TextToSpeech.OnInitListener {
 
     final String LOG_TAG = "Affectiva";
+    int rateCameraCalls = 4;
 
     Button startSDKButton;
     Button surfaceViewVisibilityButton;
@@ -206,7 +207,12 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
 
         detector = new CameraDetector(this, CameraDetector.CameraType.CAMERA_BACK, cameraPreview, 1, Detector.FaceDetectorMode.LARGE_FACES);
         detector.setLicensePath("Affdex.license");
-        detector.setDetectSmile(true);
+        detector.setDetectAllAppearance(true);
+        detector.setDetectAllEmotions(true);
+        detector.setDetectAllEmojis(true);
+        detector.setDetectAllExpressions(true);
+
+
         detector.setImageListener(this);
         detector.setOnCameraEventListener(this);
        // detector.setMaxProcessRate((float) 1);
@@ -217,7 +223,6 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
     @Override
     protected void onResume() {
         super.onResume();
-        smileTextView.setText("NO FACE");
 
         if (isSDKStarted) {
             startDetector();
@@ -250,21 +255,65 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
 
     @Override
     public void onImageResults(List<Face> list, Frame frame, float v) {
+
         if (list == null)
             return;;
         if (list.size() == 0) {
             smileTextView.setText("NO FACE");
         } else {
             Face face = list.get(0);
-            smileTextView.setText(String.format("SMILE\n%.2f",face.expressions.getSmile()));
-            if (face.expressions.getSmile() > 50) {
+            //smileTextView.setText(String.format("SMILE\n%.2f",face.expressions.getSmile()));
+            /*if (face.expressions.getSmile() > 0.0) {
                 speak ("smile");
+            }*/
+            if (rateCameraCalls != 4)
+            {
+                rateCameraCalls++;
+                return;
             }
-            try {
-                Thread.sleep(5000);
+            rateCameraCalls = 0;
+
+            float[] metricScore = new float[4];
+            metricScore[0] = face.emotions.getJoy();
+            metricScore[1] = face.emotions.getSurprise();
+            metricScore[2] = face.emotions.getAnger();
+            metricScore[3] = face.emotions.getSadness();
+
+            int maxIndex = 0;
+            float max = metricScore[0];
+            for (int i=1; i<4; i++)
+            {
+                if (metricScore[i] > max)
+                {
+                    maxIndex = i;
+                    max = metricScore[i];
+                }
+            }
+
+            switch (maxIndex)
+            {
+                case 0:
+                    speak("Joy");
+                    break;
+                case 1:
+                    speak("Surprise");
+                    break;
+                case 2:
+                    speak("Anger");
+                    break;
+                case 3:
+                    speak("Sadness");
+                    break;
+                default:
+                    break;
+            }
+
+
+           /* try {
+                Thread.sleep(400);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            }
+            }*/
         }
     }
     @Override
