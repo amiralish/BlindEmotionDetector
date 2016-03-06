@@ -16,12 +16,12 @@ public enum Metrics {
     SADNESS,
     SURPRISE,
     CONTEMPT,
-    ENGAGEMENT,
-    VALENCE,
+    //ENGAGEMENT,
+    //VALENCE,
 
     //Expressions
-    ATTENTION,
-    BROW_FURROW,
+    ATTENTION;
+    /*BROW_FURROW,
     BROW_RAISE,
     CHIN_RAISER,
     EYE_CLOSURE,
@@ -40,7 +40,7 @@ public enum Metrics {
     YAW,
     PITCH,
     ROLL,
-    INTER_OCULAR_DISTANCE;
+    INTER_OCULAR_DISTANCE;*/
 
     String getUpperCaseName() {
         return toString().replace("_"," ");
@@ -53,7 +53,7 @@ public enum Metrics {
     static int numberOfEmotions() {
         return ATTENTION.ordinal();
     }
-
+/*
     static int numberOfMeasurements() {
         return Metrics.values().length - numberOfEmotions() - numberOfExpressions();
     }
@@ -65,23 +65,23 @@ public enum Metrics {
     static int numberOfMetrics() {
         return Metrics.values().length;
     }
-
+*/
     /**
      * Returns an array to allow for iteration through all Emotions
      */
-    static Metrics[] getEmotions() {
+    /*static Metrics[] getEmotions() {
         Metrics[] emotions = new Metrics[numberOfEmotions()];
         Metrics[] allMetrics = Metrics.values();
         for (int n = 0; n < numberOfEmotions(); n++) {
             emotions[n] = allMetrics[n];
         }
         return emotions;
-    }
+    }*/
 
     /**
      * Returns an array to allow for iteration through all Expressions
      */
-    static Metrics[] getExpressions() {
+    /*static Metrics[] getExpressions() {
         Metrics[] expressions = new Metrics[numberOfExpressions()];
         Metrics[] allMetrics = Metrics.values();
         for (int n = 0; n < numberOfExpressions(); n++) {
@@ -97,5 +97,5 @@ public enum Metrics {
             measurements[n] = allMetrics[n + numberOfEmotions() + numberOfExpressions()];
         }
         return measurements;
-    }
+    }*/
 }

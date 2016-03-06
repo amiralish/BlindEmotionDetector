@@ -100,7 +100,8 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
 
     final String LOG_TAG = "Affectiva";
     int rateOfCameraCalls = 4;
-    EnumMap<Metrics,TextView> metricsTextViews = new EnumMap<>(Metrics.class);
+    public final int numOfSupportedEmotions = 5;
+    //EnumMap<Metrics,TextView> metricsTextViews = new EnumMap<>(Metrics.class);
 
     Button startSDKButton;
     Button surfaceViewVisibilityButton;
@@ -276,8 +277,8 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
             }
             rateOfCameraCalls = 0;
 
-            Metrics detectedEmotion = Metrics.NO_EMOTION;
-            float maxScore = 20;
+            /*Metrics detectedEmotion = Metrics.NO_EMOTION;
+            float maxScore = 0;
             for (Metrics metric : Metrics.values()) {
                 float scoreOfMetric = getScore(metric, face);
                 if (scoreOfMetric > maxScore)
@@ -285,19 +286,21 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
                     detectedEmotion = metric;
                 }
             }
-            speak(detectedEmotion.name());
+            //speak(detectedEmotion.name());
+            speak(detectedEmotion.getUpperCaseName());*/
 
             //for (int i=0; i)
 
-            /*float[] metricScore = new float[4];
+            float[] metricScore = new float[numOfSupportedEmotions];
             metricScore[0] = face.emotions.getJoy();
             metricScore[1] = face.emotions.getSurprise();
             metricScore[2] = face.emotions.getAnger();
             metricScore[3] = face.emotions.getSadness();
+            metricScore[4] = face.emojis.getWink();
 
             int maxIndex = 0;
             float max = metricScore[0];
-            for (int i=1; i<4; i++)
+            for (int i=1; i<numOfSupportedEmotions; i++)
             {
                 if (metricScore[i] > max)
                 {
@@ -320,9 +323,12 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
                 case 3:
                     speak("Sadness");
                     break;
+                case 4:
+                    speak("Wink");
+                    break;
                 default:
                     break;
-            }*/
+            }
 
 
            /* try {
@@ -383,69 +389,9 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
             case SURPRISE:
                 score = face.emotions.getSurprise();
                 break;
-            case ATTENTION:
+            /*case ATTENTION:
                 score = face.expressions.getAttention();
-                break;
-            case BROW_FURROW:
-                score = face.expressions.getBrowFurrow();
-                break;
-            case BROW_RAISE:
-                score = face.expressions.getBrowRaise();
-                break;
-            case CHIN_RAISER:
-                score = face.expressions.getChinRaise();
-                break;
-            case ENGAGEMENT:
-                score = face.emotions.getEngagement();
-                break;
-            case EYE_CLOSURE:
-                score = face.expressions.getEyeClosure();
-                break;
-            case INNER_BROW_RAISER:
-                score = face.expressions.getInnerBrowRaise();
-                break;
-            case LIP_DEPRESSOR:
-                score = face.expressions.getLipCornerDepressor();
-                break;
-            case LIP_PRESS:
-                score = face.expressions.getLipPress();
-                break;
-            case LIP_PUCKER:
-                score = face.expressions.getLipPucker();
-                break;
-            case LIP_SUCK:
-                score = face.expressions.getLipSuck();
-                break;
-            case MOUTH_OPEN:
-                score = face.expressions.getMouthOpen();
-                break;
-            case NOSE_WRINKLER:
-                score = face.expressions.getNoseWrinkle();
-                break;
-            case SMILE:
-                score = face.expressions.getSmile();
-                break;
-            case SMIRK:
-                score = face.expressions.getSmirk();
-                break;
-            case UPPER_LIP_RAISER:
-                score = face.expressions.getUpperLipRaise();
-                break;
-            case VALENCE:
-                score = face.emotions.getValence();
-                break;
-            case YAW:
-                score = face.measurements.orientation.getYaw();
-                break;
-            case ROLL:
-                score = face.measurements.orientation.getRoll();
-                break;
-            case PITCH:
-                score = face.measurements.orientation.getPitch();
-                break;
-            case INTER_OCULAR_DISTANCE:
-                score = face.measurements.getInterocularDistance();
-                break;
+                break;*/
             default:
                 score = Float.NaN;
                 break;
