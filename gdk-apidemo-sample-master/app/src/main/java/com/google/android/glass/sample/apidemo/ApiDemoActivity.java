@@ -61,7 +61,7 @@ public class ApiDemoActivity extends Activity {
 
     // Index of api demo cards.
     // Visible for testing.
- /*
+
     static final int EMOTION = 0;
     static final int CARD_BUILDER = 1;
     static final int CARD_BUILDER_EMBEDDED_LAYOUT = 2;
@@ -71,8 +71,8 @@ public class ApiDemoActivity extends Activity {
     static final int OPENGL = 6;
     static final int VOICE_MENU = 7;
     static final int SLIDER = 8;
-*/
 
+/*
     static final int CARD_BUILDER = 0;
     static final int CARD_BUILDER_EMBEDDED_LAYOUT = 1;
     static final int CARD_SCROLL_VIEW = 2;
@@ -82,7 +82,7 @@ public class ApiDemoActivity extends Activity {
     static final int VOICE_MENU = 6;
     static final int SLIDER = 7;
     static final int EMOTION = 8;
-
+*/
     private CardScrollAdapter mAdapter;
     private CardScrollView mCardScroller;
 
@@ -99,14 +99,21 @@ public class ApiDemoActivity extends Activity {
         mCardScroller = new CardScrollView(this);
         mCardScroller.setAdapter(mAdapter);
         setContentView(mCardScroller);
-        setCardScrollerListener();
+       // setCardScrollerListener();
+        startActivity(new Intent(ApiDemoActivity.this, EmotionDetector.class));
+
     }
 
     /**
      * Create list of API demo cards.
      */
     private List<CardBuilder> createCards(Context context) {
+
         ArrayList<CardBuilder> cards = new ArrayList<CardBuilder>();
+        cards.add(EMOTION, new CardBuilder(context, CardBuilder.Layout.TEXT)
+
+                .setText("Blind Emotion Detector"));
+/*
         cards.add(CARD_BUILDER, new CardBuilder(context, CardBuilder.Layout.TEXT)
                 .setText(R.string.text_card_builder));
         cards.add(CARD_BUILDER_EMBEDDED_LAYOUT, new CardBuilder(context, CardBuilder.Layout.TEXT)
@@ -123,8 +130,7 @@ public class ApiDemoActivity extends Activity {
                 .setText(R.string.text_voice_menu));
         cards.add(SLIDER, new CardBuilder(context, CardBuilder.Layout.TEXT)
                 .setText(R.string.text_slider));
-        cards.add(EMOTION, new CardBuilder(context, CardBuilder.Layout.TEXT)
-                .setText("Blind Emotion Detector"));
+*/
 
         return cards;
     }

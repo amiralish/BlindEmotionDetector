@@ -19,11 +19,12 @@ xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_paren
 android:layout_height="match_parent" tools:context=".Blind_Emotion_Detector.EmotionDetector"
 android:id="@+id/text_blind_emotion_detector">
 
-
+<!--
 <TextView
     android:layout_width="100dp"
     android:layout_height="50dp"
     android:background="#444444"
     android:id="@+id/smile_textview"/>
+-->
 
 </RelativeLayout>

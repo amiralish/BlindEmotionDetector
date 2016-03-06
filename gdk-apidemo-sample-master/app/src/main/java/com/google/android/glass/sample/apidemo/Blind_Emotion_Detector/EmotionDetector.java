@@ -99,7 +99,7 @@ import java.util.List;
 public class EmotionDetector extends Activity implements Detector.ImageListener, CameraDetector.CameraEventListener, TextToSpeech.OnInitListener {
 
     final String LOG_TAG = "Affectiva";
-    int rateOfCameraCalls = 4;
+    int rateOfCameraCalls = 2;
     public final int numOfSupportedEmotions = 5;
     //EnumMap<Metrics,TextView> metricsTextViews = new EnumMap<>(Metrics.class);
 
@@ -131,7 +131,7 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
 
         setContentView(R.layout.emotion_detector);
 
-        smileTextView = (TextView) findViewById(R.id.smile_textview);
+        //smileTextView = (TextView) findViewById(R.id.smile_textview);
 /*
         toggleButton = (ToggleButton) findViewById(R.id.front_back_toggle_button);
         toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -261,16 +261,16 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
     public void onImageResults(List<Face> list, Frame frame, float v) {
 
         if (list == null)
-            return;;
+            return;
         if (list.size() == 0) {
-            smileTextView.setText("NO FACE");
+            //smileTextView.setText("NO FACE");
         } else {
             Face face = list.get(0);
             //smileTextView.setText(String.format("SMILE\n%.2f",face.expressions.getSmile()));
             /*if (face.expressions.getSmile() > 0.0) {
                 speak ("smile");
             }*/
-            if (rateOfCameraCalls != 4)
+            if (rateOfCameraCalls < 2)
             {
                 rateOfCameraCalls++;
                 return;
