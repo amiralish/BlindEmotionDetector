@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import java.util.EnumMap;
 import java.util.Locale;
 import android.app.Activity;
 import android.os.Bundle;
@@ -97,7 +99,8 @@ import java.util.List;
 public class EmotionDetector extends Activity implements Detector.ImageListener, CameraDetector.CameraEventListener, TextToSpeech.OnInitListener {
 
     final String LOG_TAG = "Affectiva";
-    int rateCameraCalls = 4;
+    int rateOfCameraCalls = 4;
+    EnumMap<Metrics,TextView> metricsTextViews = new EnumMap<>(Metrics.class);
 
     Button startSDKButton;
     Button surfaceViewVisibilityButton;
@@ -266,14 +269,27 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
             /*if (face.expressions.getSmile() > 0.0) {
                 speak ("smile");
             }*/
-            if (rateCameraCalls != 4)
+            if (rateOfCameraCalls != 4)
             {
-                rateCameraCalls++;
+                rateOfCameraCalls++;
                 return;
             }
-            rateCameraCalls = 0;
+            rateOfCameraCalls = 0;
 
-            float[] metricScore = new float[4];
+            Metrics detectedEmotion = Metrics.NO_EMOTION;
+            float maxScore = 20;
+            for (Metrics metric : Metrics.values()) {
+                float scoreOfMetric = getScore(metric, face);
+                if (scoreOfMetric > maxScore)
+                {
+                    detectedEmotion = metric;
+                }
+            }
+            speak(detectedEmotion.name());
+
+            //for (int i=0; i)
+
+            /*float[] metricScore = new float[4];
             metricScore[0] = face.emotions.getJoy();
             metricScore[1] = face.emotions.getSurprise();
             metricScore[2] = face.emotions.getAnger();
@@ -306,7 +322,7 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
                     break;
                 default:
                     break;
-            }
+            }*/
 
 
            /* try {
@@ -328,18 +344,6 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
         }
     }
 
-    private void countdown( final int start ){
-        if( start > 0 ){
-            Handler handler = new Handler();
-            handler.postDelayed( new Runnable(){
-                @Override
-                public void run(){
-                    countdown( start-1 );
-                }
-            }, 1000 );
-        }
-    }
-
     public void speak(String text) {
         // If not yet initialized, queue up the text.
         if (!initialized) {
@@ -351,6 +355,102 @@ public class EmotionDetector extends Activity implements Detector.ImageListener,
         tts.stop();
         // Speak the text.
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+    }
+
+    float getScore(Metrics metric, Face face) {
+
+        float score;
+
+        switch (metric) {
+            case ANGER:
+                score = face.emotions.getAnger();
+                break;
+            case CONTEMPT:
+                score = face.emotions.getContempt();
+                break;
+            case DISGUST:
+                score = face.emotions.getDisgust();
+                break;
+            case FEAR:
+                score = face.emotions.getFear();
+                break;
+            case JOY:
+                score = face.emotions.getJoy();
+                break;
+            case SADNESS:
+                score = face.emotions.getSadness();
+                break;
+            case SURPRISE:
+                score = face.emotions.getSurprise();
+                break;
+            case ATTENTION:
+                score = face.expressions.getAttention();
+                break;
+            case BROW_FURROW:
+                score = face.expressions.getBrowFurrow();
+                break;
+            case BROW_RAISE:
+                score = face.expressions.getBrowRaise();
+                break;
+            case CHIN_RAISER:
+                score = face.expressions.getChinRaise();
+                break;
+            case ENGAGEMENT:
+                score = face.emotions.getEngagement();
+                break;
+            case EYE_CLOSURE:
+                score = face.expressions.getEyeClosure();
+                break;
+            case INNER_BROW_RAISER:
+                score = face.expressions.getInnerBrowRaise();
+                break;
+            case LIP_DEPRESSOR:
+                score = face.expressions.getLipCornerDepressor();
+                break;
+            case LIP_PRESS:
+                score = face.expressions.getLipPress();
+                break;
+            case LIP_PUCKER:
+                score = face.expressions.getLipPucker();
+                break;
+            case LIP_SUCK:
+                score = face.expressions.getLipSuck();
+                break;
+            case MOUTH_OPEN:
+                score = face.expressions.getMouthOpen();
+                break;
+            case NOSE_WRINKLER:
+                score = face.expressions.getNoseWrinkle();
+                break;
+            case SMILE:
+                score = face.expressions.getSmile();
+                break;
+            case SMIRK:
+                score = face.expressions.getSmirk();
+                break;
+            case UPPER_LIP_RAISER:
+                score = face.expressions.getUpperLipRaise();
+                break;
+            case VALENCE:
+                score = face.emotions.getValence();
+                break;
+            case YAW:
+                score = face.measurements.orientation.getYaw();
+                break;
+            case ROLL:
+                score = face.measurements.orientation.getRoll();
+                break;
+            case PITCH:
+                score = face.measurements.orientation.getPitch();
+                break;
+            case INTER_OCULAR_DISTANCE:
+                score = face.measurements.getInterocularDistance();
+                break;
+            default:
+                score = Float.NaN;
+                break;
+        }
+        return score;
     }
 
     @Override
